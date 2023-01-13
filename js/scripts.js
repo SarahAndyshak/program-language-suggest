@@ -27,8 +27,9 @@ function handleSelect(event) {
     } else {
       document.getElementById("error-message").removeAttribute("class");
     }
+}
+
 window.addEventListener("load", function() {
   const form = document.getElementById("answers");
   form.addEventListener("submit", handleSelect);
 });
-}
