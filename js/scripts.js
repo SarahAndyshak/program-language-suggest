@@ -11,7 +11,7 @@ function handleSelect(event) {
   event.preventDefault();
   //may need to change this to const w/ specific name, with input
   const caffeine = document.getElementById(parseInt("input#coffee").value);
-  const selection2 = document.getElementById(parseInt("reptiles").value);
+  const lizards = document.getElementById(parseInt("input#reptiles").value);
   const selection3 = document.getElementById(parseInt("geology").value);
   console.log(caffeine)
 }
