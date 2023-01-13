@@ -6,8 +6,12 @@ function hideResultsAndError() {
   document.getElementById("Ruby").setAttribute("class", "hidden");
 }
 
-function handleSelect(event) {
-  event.preventDefault();
+window.onload = function() {
+  hideResultsAndError();
+
+  document.querySelector("form").onsubmit = function(event) {
+    event.preventDefault();
+    hideResultsAndError();
   //may need to change this to const w/ specific name, with input
   const selection1 = document.getElementById(parseInt("coffee").value);
   const selection2 = document.getElementById(parseInt("reptiles").value);
@@ -27,3 +31,5 @@ function handleSelect(event) {
     } else {
       document.getElementById("error-message").removeAttribute("class");
     }
+  };
+};
