@@ -17,9 +17,9 @@ window.onload = function() {
   const selection1 = document.getElementById(parseInt("coffee").value);
   const selection2 = document.getElementById(parseInt("reptiles").value);
   const selection3 = document.getElementById(parseInt("geology").value);
-  console.log("selection1" + "coffee")
-  console.log("selection2" + "reptiles")
-  console.log("selection3" + "geology")
+  console.log(selection1)
+  console.log(selection2)
+  console.log(selection3)
 
   if (selection1 && selection2 && selection3) {
     if (selection1 === selection2 && selection2 == selection3) {
