@@ -6,7 +6,6 @@ function hideResultsAndError() {
   document.getElementById("Ruby").setAttribute("class", "hidden");
 }
 
-console.log("check")
 //updated code using sample from lesson on forms
 function handleSelect(event) {
   event.preventDefault();
@@ -14,8 +13,6 @@ function handleSelect(event) {
   const selection1 = parseInt(document.getElementById("coffee").value);
   const selection2 = parseInt(document.getElementById("reptiles").value);
   const selection3 = parseInt(document.getElementById("geology").value);
-  console.log(selection1)
-  console.log("test")
 
   if (selection1 && selection2 && selection3) {
     if (selection1 === selection2 && selection2 == selection3) {
