@@ -8,13 +8,26 @@ function hideResultsAndError() {
 
 window.onload = function() {
   hideResultsAndError();
-}
 
 //User Interface logic, I think
 document.querySelector("form").onsubmit = function(event) {
   event.preventDefault();
   hideResultsAndError();
-  const selection = document.getElementById(parseInt("coffee").value);
-  const selection = document.getElementById(parseInt("reptiles").value);
-  const selection = document.getElementById(parseInt("geology").value);
-}
+  //may need to change this to const w/ specific name, with input
+  const selection1 = document.getElementById(parseInt("coffee").value);
+  const selection2 = document.getElementById(parseInt("reptiles").value);
+  const selection3 = document.getElementById(parseInt("geology").value);
+
+  if (selection1 && selection2 && selection3) {
+    if (selection1 === selection2 && selection2 == selection3) {
+      document.getElementById("JavaScript").removeAttribute("class");
+    } else if (selection1 === selection2 && selection2 !== selection3 || selection2 === selection3 && selection1 !== selection3 || selection1 === selection3 && selection1 !== selection2) {
+      document.getElementById("Python").removeAttribute("class");
+    } else if (selection1 !== selection2 && selection1 !== selection3) {
+      document.getElementById("Ruby").removeAttribute("class");
+    } 
+    } else {
+      document.getElementById("error-message").removeAttribute("class");
+    }
+  };
+};
