@@ -31,3 +31,4 @@ document.querySelector("form").onsubmit = function(event) {
     }
   };
 };
+//on first run, returns no answers, and shows no errors
