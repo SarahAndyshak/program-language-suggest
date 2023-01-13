@@ -28,6 +28,7 @@ function handleSelect(event) {
       document.getElementById("error-message").removeAttribute("class");
     }
 window.addEventListener("load", function() {
-  document.getElementById("answers").addEventListener("submit", handleSelect)
+  const form = document.getElementById("answers");
+  form.addEventListener("submit", handleSelect);
 });
 }
