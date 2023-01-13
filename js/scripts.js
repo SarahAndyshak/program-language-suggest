@@ -6,15 +6,6 @@ function hideResultsAndError() {
   document.getElementById("Ruby").setAttribute("class", "hidden");
 }
 
-//adding code below to try to get form to work (10:50am), comment out at (10:58)I think this conflicts with added event listener at bottom
-//window.onload = function() {
-  //hideResultsAndError();
-
-//original logic, commented out, then added back in-11:12 out at 11:14 bc of null setting in console
-//document.querySelector("form").onsubmit = function(event) {
-  //event.preventDefault();
-  //hideResultsAndError();
-
 function handleSelect(event) {
   event.preventDefault();
   //may need to change this to const w/ specific name, with input
@@ -36,10 +27,3 @@ function handleSelect(event) {
     } else {
       document.getElementById("error-message").removeAttribute("class");
     }
-  //adding code below to try to get form to work (10:50am) out (11:12)
-    //window.addEventListener("load", function() {
-    //document.getElementById("answer").addEventListener("submit", handleSelect);
-  //});
-  };
-}; //out at 10:58, in at 11:13
-//on first run, returns no answers, and shows no errors
