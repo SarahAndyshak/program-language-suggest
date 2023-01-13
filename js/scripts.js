@@ -6,11 +6,11 @@ function hideResultsAndError() {
   document.getElementById("Ruby").setAttribute("class", "hidden");
 }
 
-//adding code below to try to get form to work
-window.onload = function() {
-  hideResultsAndError();
+//adding code below to try to get form to work (10:50am), comment out at (10:58)I think this conflicts with added event listener at bottom
+//window.onload = function() {
+  //hideResultsAndError();
 
-//User Interface logic, I think
+//User Interface logic, I think -- had put this in first
 //document.querySelector("form").onsubmit = function(event) {
   //event.preventDefault();
   //hideResultsAndError();
@@ -36,10 +36,10 @@ function handleSelect(event) {
     } else {
       document.getElementById("error-message").removeAttribute("class");
     }
-  //adding code below to try to get form to work
+  //adding code below to try to get form to work (10:50am)
     window.addEventListener("load", function() {
     document.getElementById("answer").addEventListener("submit", handleSelect);
   });
   };
-};
+//};
 //on first run, returns no answers, and shows no errors
