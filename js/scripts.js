@@ -11,3 +11,7 @@ window.onload = function() {
 }
 
 //User Interface logic, I think
+document.querySelector("form").onsubmit = function(event) {
+  event.preventDefault();
+  hideResultsAndError();
+}
