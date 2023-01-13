@@ -10,7 +10,7 @@ function hideResultsAndError() {
 //window.onload = function() {
   //hideResultsAndError();
 
-//User Interface logic, I think -- had put this in first
+//original logic, commented out, then added back in-11:12 out at 11:14 bc of null setting in console
 //document.querySelector("form").onsubmit = function(event) {
   //event.preventDefault();
   //hideResultsAndError();
@@ -36,10 +36,10 @@ function handleSelect(event) {
     } else {
       document.getElementById("error-message").removeAttribute("class");
     }
-  //adding code below to try to get form to work (10:50am)
-    window.addEventListener("load", function() {
-    document.getElementById("answer").addEventListener("submit", handleSelect);
-  });
+  //adding code below to try to get form to work (10:50am) out (11:12)
+    //window.addEventListener("load", function() {
+    //document.getElementById("answer").addEventListener("submit", handleSelect);
+  //});
   };
-//};
+}; //out at 10:58, in at 11:13
 //on first run, returns no answers, and shows no errors
