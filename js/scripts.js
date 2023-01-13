@@ -13,7 +13,7 @@ function handleSelect(event) {
   const coffee = parseInt(document.getElementById("coffee").value);
   const selection2 = parseInt(document.getElementById("reptiles").value);
   const selection3 = paresInt(document.getElementById("geology").value);
-}
+
 
   if (coffee && selection2 && selection3) {
     if (coffee === selection2 && selection2 == selection3) {
@@ -29,3 +29,4 @@ function handleSelect(event) {
 window.addEventListener("load", function() {
   document.getElementById("answers").addEventListener("submit", handleSelect)
 });
+};
