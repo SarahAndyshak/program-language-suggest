@@ -6,17 +6,14 @@ function hideResultsAndError() {
   document.getElementById("Ruby").setAttribute("class", "hidden");
 }
 
-//this is the original code for loading window, readded, program runs again
-window.onload = function() {
-  hideResultsAndError();
-
-  document.querySelector("form").onsubmit = function(event) {
-    event.preventDefault();
-    hideResultsAndError();
+function handleSelect(event) {
+  event.preventDefault();
   //may need to change this to const w/ specific name, with input
   const selection1 = document.getElementById(parseInt("coffee").value);
   const selection2 = document.getElementById(parseInt("reptiles").value);
   const selection3 = document.getElementById(parseInt("geology").value);
+  console.log(selection1)
+}
 
   if (selection1 && selection2 && selection3) {
     if (selection1 === selection2 && selection2 == selection3) {
@@ -29,5 +26,6 @@ window.onload = function() {
     } else {
       document.getElementById("error-message").removeAttribute("class");
     }
-  };
-};
+window.addEventListener("load", function() {
+  document.getElementById("answers").addEventListener("submit", handleSelect)
+});
