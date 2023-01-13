@@ -6,6 +6,7 @@ function hideResultsAndError() {
   document.getElementById("Ruby").setAttribute("class", "hidden");
 }
 
+//this is the original code for loading window, readded, program runs again
 window.onload = function() {
   hideResultsAndError();
 
