@@ -14,4 +14,7 @@ window.onload = function() {
 document.querySelector("form").onsubmit = function(event) {
   event.preventDefault();
   hideResultsAndError();
+  const selection = document.getElementById(parseInt("coffee").value);
+  const selection = document.getElementById(parseInt("reptiles").value);
+  const selection = document.getElementById(parseInt("geology").value);
 }
