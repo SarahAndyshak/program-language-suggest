@@ -6,17 +6,24 @@ function hideResultsAndError() {
   document.getElementById("Ruby").setAttribute("class", "hidden");
 }
 
+//adding code below to try to get form to work
 window.onload = function() {
   hideResultsAndError();
 
 //User Interface logic, I think
-document.querySelector("form").onsubmit = function(event) {
+//document.querySelector("form").onsubmit = function(event) {
+  //event.preventDefault();
+  //hideResultsAndError();
+
+function handleSelect(event) {
   event.preventDefault();
-  hideResultsAndError();
   //may need to change this to const w/ specific name, with input
   const selection1 = document.getElementById(parseInt("coffee").value);
   const selection2 = document.getElementById(parseInt("reptiles").value);
   const selection3 = document.getElementById(parseInt("geology").value);
+  console.log("selection1" + "coffee")
+  console.log("selection2" + "reptiles")
+  console.log("selection3" + "geology")
 
   if (selection1 && selection2 && selection3) {
     if (selection1 === selection2 && selection2 == selection3) {
@@ -29,6 +36,10 @@ document.querySelector("form").onsubmit = function(event) {
     } else {
       document.getElementById("error-message").removeAttribute("class");
     }
+  //adding code below to try to get form to work
+    window.addEventListener("load", function() {
+    document.getElementById("answer").addEventListener("submit", handleSelect);
+  });
   };
 };
 //on first run, returns no answers, and shows no errors
