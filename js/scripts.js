@@ -6,14 +6,15 @@ function hideResultsAndError() {
   document.getElementById("Ruby").setAttribute("class", "hidden");
 }
 
+console.log("check")
 //updated code using sample from lesson on forms
 function handleSelect(event) {
   event.preventDefault();
   //may need to change this to const w/ specific name, with input
   const coffee = parseInt(document.getElementById("coffee").value);
-  console.log("coffee" + coffee)
   const selection2 = parseInt(document.getElementById("reptiles").value);
   const selection3 = parseInt(document.getElementById("geology").value);
+  console.log(coffee)
 
   if (coffee && selection2 && selection3) {
     if (coffee === selection2 && selection2 == selection3) {
@@ -29,4 +30,4 @@ function handleSelect(event) {
 window.addEventListener("load", function() {
   document.getElementById("answers").addEventListener("submit", handleSelect)
 });
-};
+}
