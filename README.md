@@ -21,7 +21,7 @@ _This webpage asks 5 questions and then suggests that the viewer study JavaScrip
 
 ## Known Bugs
 
-* As of 11:27 on 1/13/23 the page loads but will not function.
+* None as of 4:34 pm on 13 January 2023.
 
 ## License
 

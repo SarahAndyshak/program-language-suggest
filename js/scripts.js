@@ -37,6 +37,9 @@ window.addEventListener("load", function() {
     resetBtn.removeAttribute("class");
   });
   resetBtn.addEventListener("click", function() {
+    document.getElementById("JavaScript").setAttribute("class", "hidden");//hides response, at this point, had to do it for each div id. Tried creating overarching div, but then the results didn't show up -- to refactor need to add in extra command about removing class on submit, needs more research and time.
+    document.getElementById("Python").setAttribute("class", "hidden");
+    document.getElementById("Ruby").setAttribute("class", "hidden");
     document.getElementById("coffee").value = null;
     document.getElementById("reptiles").value = null;
     document.getElementById("geology").value = null;
