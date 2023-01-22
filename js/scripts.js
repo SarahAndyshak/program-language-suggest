@@ -16,8 +16,6 @@ function handleSelect(event) {
   const selection1 = parseInt(document.getElementById("coffee").value);
   const selection2 = parseInt(document.getElementById("reptiles").value);
   const selection3 = parseInt(document.getElementById("geology").value);
-  //const selection4 = document.getElementById("forms");//added in for reset button function
-  //const selection5 = document.getElementById("computers");
 
   if (selection1 && selection2 && selection3) {
     if (selection1 === selection2 && selection2 == selection3) {
@@ -34,6 +32,7 @@ function handleSelect(event) {
 
 window.addEventListener("load", function() {
   const form = document.getElementById("answers");
+  hideResultsAndError(); // added to test- this sets the form as blank and resets the form, but if used still shows all results
   let resetBtn = document.querySelector("button#reset"); //reset button starts here
   form.addEventListener("submit", handleSelect);
   form.addEventListener("submit", function() {
